@@ -53,9 +53,9 @@ jobs:
           touch ./.config
           cat >> .config <<EOF
           # Device type
-          CONFIG_TARGET_ramips=y
-          CONFIG_TARGET_ramips_mt7621=y
-          CONFIG_TARGET_ramips_mt7621_DEVICE_d-team_newifi-d2=y
+          CONFIG_TARGET_x86=y
+          CONFIG_TARGET_x86_64=y
+          CONFIG_TARGET_x86_64_Generic=y
 
           # Gzip
           CONFIG_TARGET_IMAGES_GZIP=y
@@ -77,7 +77,7 @@ jobs:
           CONFIG_PACKAGE_kmod-fs-ntfs=y
           
           # APP
-          CONFIG_PACKAGE_luci-app-aliddns=y
+          CONFIG_PACKAGE_luci-app-aliddns is not set
           CONFIG_PACKAGE_luci-app-aria2=y
           CONFIG_PACKAGE_luci-app-frpc=y
           CONFIG_PACKAGE_luci-app-frps=y
@@ -96,18 +96,10 @@ jobs:
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray_plugin=y
           # CONFIG_PACKAGE_luci-app-syncdial=y
-          CONFIG_PACKAGE_luci-app-ttyd=y
+          CONFIG_PACKAGE_luci-app-ttyd is not set
           # CONFIG_PACKAGE_luci-app-usb-printer=y
           CONFIG_PACKAGE_luci-app-xlnetacc=y
 
-          # Open source WIFI driver
-          CONFIG_PACKAGE_kmod-mt7603=y
-          CONFIG_PACKAGE_kmod-mt7603e=n
-          CONFIG_PACKAGE_kmod-mt76x2=y
-          CONFIG_PACKAGE_kmod-mt76x2e=n
-          CONFIG_PACKAGE_hostapd-common=y
-          CONFIG_PACKAGE_wpad-openssl=y
-          CONFIG_PACKAGE_luci-app-mtwifi=n
           
           EOF
           
