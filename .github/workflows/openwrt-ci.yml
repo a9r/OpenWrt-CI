@@ -52,7 +52,7 @@ jobs:
           
       - name: Update feeds
         run: |
-          sed -i 's/#src-git helloworld/src-git helloworld/g' ./feeds.conf.default
+          sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
           ./scripts/feeds update -a
           ./scripts/feeds install -a
           
@@ -113,6 +113,8 @@ jobs:
           CONFIG_PACKAGE_luci-app-aliddns is not set
           CONFIG_PACKAGE_luci-app-aria2 is not set
           CONFIG_PACKAGE_luci-app-unblockmusic is not set
+          CONFIG_PACKAGE_UnblockNeteaseMusic is not set
+          CONFIG_PACKAGE_UnblockNeteaseMusicGo is not set
           CONFIG_PACKAGE_luci-app-vsftpd is not set
           CONFIG_PACKAGE_luci-app-mwan3 is not set
           CONFIG_PACKAGE_luci-app-mwan3helper is not set
