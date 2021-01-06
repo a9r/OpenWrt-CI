@@ -112,29 +112,85 @@ jobs:
           
           CONFIG_PACKAGE_luci-app-aliddns is not set
           CONFIG_PACKAGE_luci-app-aria2 is not set
-          CONFIG_PACKAGE_luci-app-unblockmusic is not set
-          CONFIG_PACKAGE_UnblockNeteaseMusicGo is not set
-          CONFIG_PACKAGE_UnblockNeteaseMusic_NodeJS is not set
-          CONFIG_PACKAGE_UnblockNeteaseMusic is not set
-          CONFIG_PACKAGE_UnblockNeteaseMusicGo is not set
-          CONFIG_PACKAGE_luci-app-vsftpd is not set
-          CONFIG_PACKAGE_luci-app-mwan3 is not set
-          CONFIG_PACKAGE_luci-app-mwan3helper is not set
-          CONFIG_PACKAGE_luci-app-openvpn is not set
-          CONFIG_PACKAGE_luci-app-openvpn-server is not set
-          CONFIG_PACKAGE_luci-app-samba is not set
-          CONFIG_PACKAGE_luci-app-syncdial is not set
-          CONFIG_PACKAGE_luci-app-ttyd is not set
-          CONFIG_PACKAGE_luci-app-usb-printer is not set
-          CONFIG_PACKAGE_luci-app-xlnetacc is not set
-          CONFIG_PACKAGE_luci-app-filetransfer is not set
-          CONFIG_PACKAGE_luci-app-arpbind is not set
-          CONFIG_PACKAGE_luci-app-wol is not set
-          CONFIG_PACKAGE_ddns-scripts_aliyun is not set
-          CONFIG_PACKAGE_ddns-scripts_dnspod is not set
-          CONFIG_PACKAGE_luci-app-vlmcsd is not set
-          CONFIG_PACKAGE_luci-app-accesscontrol is not set
-          CONFIG_PACKAGE_luci-app-sfe is not set
+          
+          #
+          # NeteaseMusic
+          #
+          # CONFIG_DEFAULT_luci-app-unblockmusic is not set
+          # CONFIG_PACKAGE_luci-app-unblockmusic is not set
+          # CONFIG_UnblockNeteaseMusic_Go is not set
+          # CONFIG_UnblockNeteaseMusic_NodeJS is not set
+          # CONFIG_PACKAGE_UnblockNeteaseMusic is not set
+          # CONFIG_PACKAGE_UnblockNeteaseMusicGo is not set
+          # CONFIG_UnblockNeteaseMusicGo_INCLUDE_GOPROXY is not set
+          
+          # CONFIG_PACKAGE_luci-app-zerotier is not set
+          # CONFIG_PACKAGE_zerotier is not set
+          
+          # CONFIG_PACKAGE_luci-app-vlmcsd is not set
+          # CONFIG_PACKAGE_vlmcsd is not set
+          
+          # CONFIG_PACKAGE_luci-app-vsftpd is not set
+          # CONFIG_PACKAGE_vsftpd is not set
+          # CONFIG_PACKAGE_vsftpd-alt is not set
+          # CONFIG_PACKAGE_vsftpd-tls is not set
+          
+          # CONFIG_PACKAGE_luci-app-samba is not set
+          # CONFIG_PACKAGE_luci-app-samba4 is not set
+          # CONFIG_PACKAGE_luci-i18n-samba-ca is not set
+          # CONFIG_PACKAGE_luci-i18n-samba-cs is not set
+          # CONFIG_PACKAGE_luci-i18n-samba-de is not set
+          # CONFIG_PACKAGE_luci-i18n-samba-el is not set
+          # CONFIG_PACKAGE_luci-i18n-samba-en is not set
+          # CONFIG_PACKAGE_luci-i18n-samba-es is not set
+          # CONFIG_PACKAGE_luci-i18n-samba-fr is not set
+          # CONFIG_PACKAGE_luci-i18n-samba-he is not set
+          # CONFIG_PACKAGE_luci-i18n-samba-hu is not set
+          # CONFIG_PACKAGE_luci-i18n-samba-it is not set
+          # CONFIG_PACKAGE_luci-i18n-samba-ja is not set
+          # CONFIG_PACKAGE_luci-i18n-samba-ms is not set
+          # CONFIG_PACKAGE_luci-i18n-samba-no is not set
+          # CONFIG_PACKAGE_luci-i18n-samba-pl is not set
+          # CONFIG_PACKAGE_luci-i18n-samba-pt is not set
+          # CONFIG_PACKAGE_luci-i18n-samba-pt-br is not set
+          # CONFIG_PACKAGE_luci-i18n-samba-ro is not set
+          # CONFIG_PACKAGE_luci-i18n-samba-ru is not set
+          # CONFIG_PACKAGE_luci-i18n-samba-sk is not set
+          # CONFIG_PACKAGE_luci-i18n-samba-sv is not set
+          # CONFIG_PACKAGE_luci-i18n-samba-tr is not set
+          # CONFIG_PACKAGE_luci-i18n-samba-uk is not set
+          # CONFIG_PACKAGE_luci-i18n-samba-vi is not set
+          # CONFIG_PACKAGE_luci-i18n-samba-zh-cn is not set
+          # CONFIG_PACKAGE_luci-i18n-samba-zh-tw is not set
+          # CONFIG_PACKAGE_samba36-client is not set
+          # CONFIG_PACKAGE_samba36-net is not set
+          # CONFIG_PACKAGE_samba36-server is not set
+          # CONFIG_PACKAGE_samba4-admin is not set
+          # CONFIG_PACKAGE_samba4-client is not set
+          # CONFIG_PACKAGE_samba4-libs is not set
+          # CONFIG_PACKAGE_samba4-server is not set
+          # CONFIG_PACKAGE_samba4-utils is not set
+          # CONFIG_PACKAGE_SAMBA_MAX_DEBUG_LEVEL is not set
+
+          # CONFIG_PACKAGE_luci-app-filetransfer is not set
+          
+          # CONFIG_PACKAGE_luci-app-mwan3 is not set
+          # CONFIG_PACKAGE_luci-app-mwan3helper is not set
+          # CONFIG_PACKAGE_luci-app-openvpn is not set
+          # CONFIG_PACKAGE_luci-app-openvpn-server is not set
+          # CONFIG_PACKAGE_luci-app-samba is not set
+          # CONFIG_PACKAGE_luci-app-syncdial is not set
+          # CONFIG_PACKAGE_luci-app-ttyd is not set
+          # CONFIG_PACKAGE_luci-app-usb-printer is not set
+          # CONFIG_PACKAGE_luci-app-xlnetacc is not set
+          # CONFIG_PACKAGE_luci-app-filetransfer is not set
+          # CONFIG_PACKAGE_luci-app-arpbind is not set
+          # CONFIG_PACKAGE_luci-app-wol is not set
+          # CONFIG_PACKAGE_ddns-scripts_aliyun is not set
+          # CONFIG_PACKAGE_ddns-scripts_dnspod is not set
+          # CONFIG_PACKAGE_luci-app-vlmcsd is not set
+          # CONFIG_PACKAGE_luci-app-accesscontrol is not set
+          # CONFIG_PACKAGE_luci-app-sfe is not set
           
           # 取消编译VMware镜像以及镜像填充
           CONFIG_TARGET_IMAGES_PAD is not set
