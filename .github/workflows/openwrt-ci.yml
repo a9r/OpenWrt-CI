@@ -135,6 +135,8 @@ jobs:
           # CONFIG_PACKAGE_UnblockNeteaseMusicGo is not set
           # CONFIG_UnblockNeteaseMusicGo_INCLUDE_GOPROXY is not set
           
+          # CONFIG_PACKAGE_luci-app-jd-dailybonus is not set
+          
           # CONFIG_PACKAGE_luci-app-zerotier is not set
           # CONFIG_PACKAGE_zerotier is not set
           
