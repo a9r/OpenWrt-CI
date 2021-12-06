@@ -57,9 +57,9 @@ jobs:
           ./scripts/feeds install -a
           
           # open clash
-          git clone https://github.com/vernesong/OpenClash.git package-temp
-          mv -f package-temp/luci-app-openclash package/lean/
-          rm -rf package-temp
+          # git clone https://github.com/vernesong/OpenClash.git package-temp
+          # mv -f package-temp/luci-app-openclash package/lean/
+          # rm -rf package-temp
 
       - name: Custom configure file
         run: |
@@ -113,7 +113,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray_plugin=y
           
-          CONFIG_PACKAGE_luci-app-openclash=y
+          # CONFIG_PACKAGE_luci-app-openclash is not set
           
           # 硬盘休眠
           # CONFIG_PACKAGE_luci-app-hd-idle is not set
