@@ -225,16 +225,24 @@ jobs:
           echo -e "$(nproc) thread build."
           make -j$(nproc) V=s
           
-      - name: Prepare artifact
+      - name: Generate release tag
+        id: tag
+        if: env.UPLOAD_RELEASE == 'true' && !cancelled()
         run: |
-          rm -rf ./artifact/
-          mkdir -p ./artifact/
-          find ./bin/targets/ -name "*combined*img*" | xargs -i mv -f {} ./artifact/
-          find ./bin/targets/ -name "*efi*img*" | xargs -i mv -f {} ./artifact/
-          find ./bin/targets/ -name "*sysupgrade*bin*" | xargs -i mv -f {} ./artifact/
-          
-      - name : Upload artifact
-        uses: actions/upload-artifact@master
+          tag="x86/64"
+          echo "RELEASE_TAG=$tag" >> $GITHUB_OUTPUT
+          echo "RELEASE_NAME=$(date +"%Y.%m.%d") for $tag" >> $GITHUB_OUTPUT
+          echo "console address: http://192.168.1.1
+                default password: password" > release.txt
+          echo "RELEASE_SUCCESS=success" >> $GITHUB_OUTPUT
+
+      - name: Upload firmware to release
+        uses: softprops/action-gh-release@v1
+        if: steps.tag.outputs.RELEASE_SUCCESS == 'success' && !cancelled()
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
         with:
-          name: OpenWrt firmware
-          path: ./artifact/
+          name: ${{ steps.tag.outputs.RELEASE_NAME }}
+          tag_name: ${{ steps.tag.outputs.RELEASE_TAG }}
+          files: ./bin/targets/*
+          body_path: release.txt
