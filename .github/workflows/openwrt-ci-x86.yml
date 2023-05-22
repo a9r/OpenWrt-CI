@@ -234,6 +234,7 @@ jobs:
           echo "console address: http://192.168.1.1
                 default password: password" > release.txt
           echo "RELEASE_SUCCESS=success" >> $GITHUB_OUTPUT
+          ls -al ./bin/targets/* >> release.txt
 
       - name: Upload firmware to release
         uses: softprops/action-gh-release@v1
