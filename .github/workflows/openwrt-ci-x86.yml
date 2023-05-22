@@ -224,32 +224,22 @@ jobs:
         run: |
           echo -e "$(nproc) thread build."
           make -j$(nproc) V=s
-          
-      - name: Generate release tag
-        id: tag
-        run: |
-          tag="x86/64"
-          echo "RELEASE_TAG=$tag" >> $GITHUB_OUTPUT
-          echo "RELEASE_NAME=$(date +"%Y.%m.%d") for $tag" >> $GITHUB_OUTPUT
-          echo "console address: http://192.168.1.1
-                default password: password" > release.txt
-          echo "RELEASE_SUCCESS=success" >> $GITHUB_OUTPUT
 
       - name: Upload firmware to release
         uses: softprops/action-gh-release@v1
-        if: steps.tag.outputs.RELEASE_SUCCESS == 'success' && !cancelled()
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
         with:
-          name: ${{ steps.tag.outputs.RELEASE_NAME }}
-          tag_name: ${{ steps.tag.outputs.RELEASE_TAG }}
+          name: RELEASE_NAME=$(date +"%Y.%m.%d") for x86/64
+          tag_name: x86/64
           files: ./bin/targets/x86/64/*
-          body_path: release.txt
+          body: "console address: http://192.168.1.1 default password: password"
 
       - name: Remove old Releases
         uses: dev-drprasad/delete-older-releases@v0.1.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
         with:
           keep_latest: 20
           delete_tags: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+        
