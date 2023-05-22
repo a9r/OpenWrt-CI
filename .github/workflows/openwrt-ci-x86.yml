@@ -244,5 +244,5 @@ jobs:
         with:
           name: ${{ steps.tag.outputs.RELEASE_NAME }}
           tag_name: ${{ steps.tag.outputs.RELEASE_TAG }}
-          files: ./bin/targets/*
+          files: ./bin/targets/*img*
           body_path: release.txt
