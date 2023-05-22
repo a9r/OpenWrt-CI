@@ -235,7 +235,7 @@ jobs:
           files: ./bin/targets/x86/64/*
           body: "console address: http://192.168.1.1 default password: password"
       
-      - uses: dev-drprasad/delete-older-releases@v0.2
+      - uses: dev-drprasad/delete-older-releases@v0.2.1
         with:
           keep_latest: 3
         env:
