@@ -232,7 +232,7 @@ jobs:
         with:
           name: openwrt for x86/64
           tag_name: x86/64
-          files: ./bin/targets/x86/64/*
+          files: ./bin/targets/x86/64/*.img.gz
           body: "console address: http://192.168.1.1 default password: password"
       
       - uses: dev-drprasad/delete-older-releases@v0.2.1
